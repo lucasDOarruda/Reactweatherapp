@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './/style.css'
+import axios from 'axios';
+
 
 function Home() {
+
+  const [ data, setData] = useState ({
+    celcius: 10,
+    name: 'London',
+    humidity: 10,
+    speed: 2
+  })
+
+    useEffect(()=> {
+
+      const apiUrl ='https://api.openweathermap.org/data/2.5/weather?q=London&appid=94571ad5bfa119c8ca0026d8d2e72434&units=metric';
+      axios.get(apiUrl)
+      .then(res => console.log(res))
+      .catch( err => console.log(err));
+
+
+    },[])
+
   return (
     <div className="container">
       <div className=" weather">
