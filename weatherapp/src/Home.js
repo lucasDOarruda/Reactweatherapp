@@ -26,17 +26,17 @@ const handleClick =() => {
         imagePath = "/Images/amazon/clouds.png"
       } else if(res.data.weather[0].main == "Clear"){
         imagePath ="/Images/amazon/clear.png"
-      }else if(res.data.weather[0].main == "Clear"){
-        imagePath ="/Images/amazon/clear.png"
-      }else if(res.data.weather[0].main == "Clear"){
-        imagePath ="/Images/amazon/clear.png"
-      }else if(res.data.weather[0].main == "Clear"){
-        imagePath ="/Images/amazon/clear.png"
+      }else if(res.data.weather[0].main == "Rain"){
+        imagePath ="/Images/amazon/rain.png"
+      }else if(res.data.weather[0].main == "Drizzle"){
+        imagePath ="/Images/amazon/drizzle.png"
+      }else if(res.data.weather[0].main == "Mist"){
+        imagePath ="/Images/amazon/clouds.png"
       } 
 
     
       console.log(res.data);
-      setData({...data, celcius: res.data.main.temp, name: res.data.name, humidity: res.data.main.humidity, speed: res.data.wind.speed})
+      setData({...data, celcius: res.data.main.temp, name: res.data.name, humidity: res.data.main.humidity, speed: res.data.wind.speed, imagePath})
 
     })
     .catch( err => console.log(err));
@@ -52,7 +52,7 @@ const handleClick =() => {
           <button><img src="/Images/amazon/search.png" onClick={handleClick} alt=" "/></button>
         </div>
         <div className="winfo">
-          <img src="/Images/amazon/clouds.png" alt=""/>
+          <img src={data.image} alt=""/>
           <h1>{Math.round(data.celcius)}°c</h1>
           <h2>{data.name}</h2>
 
