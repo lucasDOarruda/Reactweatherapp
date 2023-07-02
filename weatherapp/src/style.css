@@ -1,7 +1,7 @@
 html {
-  background-color: #e5e5f7;
+  background-color: #fdfdff;
   opacity: 0.8;
-  background-image:  repeating-linear-gradient(45deg, #444cf7 25%, transparent 25%, transparent 75%, #444cf7 75%, #444cf7), repeating-linear-gradient(45deg, #444cf7 25%, #e5e5f7 25%, #e5e5f7 75%, #444cf7 75%, #444cf7);
+  background-image:  repeating-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #0f0f0f 75%, #77ff00), repeating-linear-gradient(45deg, #d60707 25%, #1d034d 25%, #f7fb07 75%, #444cf7 75%, #504c03);
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
   
@@ -11,7 +11,7 @@ html {
 
 .weather {
   border-style: groove;
-  border-color: #0000ff;
+  border-color: #000000;
   border-width: 2px;
   width: 380px;
   padding: 30px;
@@ -20,6 +20,7 @@ html {
   color: white;
   margin: 50px auto;
   background-color: rgb(226, 10, 255);
+  z-index: calc(-1);
   
   
 
