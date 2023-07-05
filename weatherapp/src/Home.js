@@ -5,6 +5,8 @@ import axios from 'axios';
 
 function Home() {
 
+
+
   const [ data, setData] = useState ({
     celcius: 10,
     name: 'London',
@@ -46,8 +48,9 @@ const handleClick =() => {
 
   return (
 
-
+    
     <div className="container">
+      <h1 className="title1 ">Weather</h1>
       <div className=" weather">
         <div className=" search">
           <input type= "text" placeholder='Enter City Name'onChange={e => setName(e.target.value)}/>

@@ -9,6 +9,14 @@ html {
 
 }
 
+h1.title1{
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .weather {
   border-style: groove;
   border-color: #000000;
