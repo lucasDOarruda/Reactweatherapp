@@ -22,11 +22,11 @@ const TodoList = () => {
   return (
     <div className='Todolist'>
       <h2>Todo List</h2>
-      <input
+      <input className='placeholder1'
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Enter a new todo"
+        placeholder="New todo"
       />
       <button onClick={addTodo}>Add</button>
 

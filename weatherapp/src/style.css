@@ -27,6 +27,13 @@ h1.title1{
   margin: 50px auto;
   background-color: rgb(203, 10, 241);
   z-index: calc(-1);
+  box-shadow:
+  0.8px 2.2px 7.7px rgba(0, 0, 0, 0.34),
+  1.9px 5.3px 18.5px rgba(0, 0, 0, 0.244),
+  3.5px 9.9px 34.8px rgba(0, 0, 0, 0.203),
+  6.3px 17.6px 62.1px rgba(0, 0, 0, 0.17),
+  11.7px 33px 116.1px rgba(0, 0, 0, 0.137),
+  28px 79px 278px rgba(0, 0, 0, 0.096)
   
   
 
@@ -112,7 +119,7 @@ margin-right: 12px;
 }
 
 div.Todolist {
-  background-color: #f2f2f29d;
+  background-color: #f2f2f2c2;
   width: 380px;
   padding: 30px;
   margin: 0 auto;
@@ -122,18 +129,29 @@ div.Todolist {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow:
+  0.8px 2.2px 7.7px rgba(0, 0, 0, 0.34),
+  1.9px 5.3px 18.5px rgba(0, 0, 0, 0.244),
+  3.5px 9.9px 34.8px rgba(0, 0, 0, 0.203),
+  6.3px 17.6px 62.1px rgba(0, 0, 0, 0.17),
+  11.7px 33px 116.1px rgba(0, 0, 0, 0.137),
+  28px 79px 278px rgba(0, 0, 0, 0.096)
+}
+
+.placeholder1{
+  color: #000000;
+  background-color: #ffffff;
+
 }
 
 
 
-
-
-
 .game {
- 
+ color: #f2f2f2;
   text-align: center;
   margin-top: 20px;
   font-family: Arial, sans-serif;
+  
 }
 
 .board {
