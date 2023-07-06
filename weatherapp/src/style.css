@@ -1,9 +1,7 @@
 html {
-  background-color: #1515e9;
-  opacity: 0.8;
+  background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,76,121,1) 42%, rgba(0,212,255,1) 100%);
   
-  background-position: 0 0, 10px 10px;
-  background-size: 20px 20px;
   
 
 
@@ -175,3 +173,6 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+
+
