@@ -8,13 +8,14 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,76,121,1) 42%, rgba(
 }
 
 h1.title1{
-  font-size: 100px;
+  color: #000000;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
+/* shadow from external tool */
 .weather {
   border-style: groove;
   border-color: #000000;

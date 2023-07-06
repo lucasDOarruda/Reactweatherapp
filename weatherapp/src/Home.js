@@ -12,7 +12,7 @@ function Home() {
     name: 'London',
     humidity: 10,
     speed: 2,
-    image:'/Images/amazon/clouds.png'
+    image:'/Images/amazon/clouds'
   })
     const[name, setName] = useState('');
 
@@ -27,7 +27,7 @@ const handleClick =() => {
       if(res.data.weather[0].main== "Clouds"){
         imagePath = "/Images/amazon/clouds.png"
       } else if(res.data.weather[0].main == "Clear"){
-        imagePath ="/Images/amazon/clear.png"
+        imagePath ="/Images/amazon/Clear.png"
       }else if(res.data.weather[0].main == "Rain"){
         imagePath ="/Images/amazon/rain.png"
       }else if(res.data.weather[0].main == "Drizzle"){
@@ -51,11 +51,12 @@ const handleClick =() => {
 
     <div className="container">
 
-      <h1 className="title1 ">Weather</h1>
+     
       <div className=" weather">
+      <h1 className="title1 ">Weather</h1>
         <div className=" search">
           <input type= "text" placeholder='Enter City Name'onChange={e => setName(e.target.value)}/>
-          <button><img src="/Images/amazon/search.png" onClick={handleClick} alt=" "/></button>
+          <button><img src="/Images/amazon/Search.PNG" onClick={handleClick} alt=" "/></button>
         </div>
         <div className="winfo">
           <img src={data.image} alt=""/>
