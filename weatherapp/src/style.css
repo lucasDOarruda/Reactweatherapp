@@ -157,7 +157,14 @@ div.Todolist {
 }
 
 ul.list {
-  color:white;
+  margin-right: 50%;
+  color: #f2f2f2;
+  font-weight: 100px;
+}
+
+button.buttonremove {
+  color: white;
+  background-color: #c5b9b900;
   
 }
 
@@ -197,14 +204,16 @@ ul.list {
 }
 
 button {
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 8px 20px;
-  background-color: #4caf50;
+
+  background-color: #226224;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 5px;
   cursor: pointer;
+
 }
 
 
