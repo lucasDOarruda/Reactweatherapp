@@ -26,7 +26,8 @@ h1.title1{
   text-align: center;
   color: white;
   margin: 50px auto;
-  background-color: rgb(203, 10, 241);
+  background: rgb(119,38,230);
+  background: linear-gradient(0deg, rgba(119,38,230,1) 0%, rgba(255,255,255,1) 100%);
   z-index: calc(-1);
   box-shadow:
   0.8px 2.2px 7.7px rgba(0, 0, 0, 0.34),
@@ -39,6 +40,9 @@ h1.title1{
   
 
 }
+
+
+
 
 .winfo img {
   margin-top: 25px;
@@ -120,7 +124,9 @@ margin-right: 12px;
 }
 
 div.Todolist {
-  background-color: #f2f2f2c2;
+  background: rgb(148,74,250);
+  background: linear-gradient(177deg, rgba(148,74,250,1) 0%, rgba(0,0,0,1) 100%);
+  
   width: 380px;
   padding: 30px;
   margin: 0 auto;
@@ -130,22 +136,30 @@ div.Todolist {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
   box-shadow:
   0.8px 2.2px 7.7px rgba(0, 0, 0, 0.34),
   1.9px 5.3px 18.5px rgba(0, 0, 0, 0.244),
   3.5px 9.9px 34.8px rgba(0, 0, 0, 0.203),
   6.3px 17.6px 62.1px rgba(0, 0, 0, 0.17),
   11.7px 33px 116.1px rgba(0, 0, 0, 0.137),
-  28px 79px 278px rgba(0, 0, 0, 0.096)
+  28px 79px 278px rgba(0, 0, 0, 0.096);
+
 }
+
 
 .placeholder1{
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #80787800;
+  
+  
 
 }
 
-
+ul.list {
+  color:white;
+  
+}
 
 .game {
  color: #f2f2f2;

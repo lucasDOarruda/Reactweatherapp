@@ -23,14 +23,14 @@ const TodoList = () => {
     <div className='Todolist'>
       <h2>Todo List</h2>
       <input className='placeholder1'
-        type="text"
+        type="text" 
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         placeholder="New todo"
       />
       <button onClick={addTodo}>Add</button>
 
-      <ul>
+      <ul className='list'>
         {todos.map((todo, index) => (
           <li key={index}>
             {todo}
