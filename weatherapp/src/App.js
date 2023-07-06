@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Home'
-import TodoList from './Todolist'
+import TodoList from './TodoList'
 
 
 function App() {
