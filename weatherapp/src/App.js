@@ -1,7 +1,8 @@
 import React from 'react'
 import Home from './Home'
-import TodoList from './Todolist'
-import TicTacToe from './TicTacToe'
+import TodoList from './components/Todolist'
+import TicTacToe from './components/TicTacToe'
+import Weather from './components/Weather'
 
 
 
@@ -11,6 +12,7 @@ function App() {
     <Home />
    <TodoList/>
    <TicTacToe/>
+    <Weather/>
 
 </div>
   )

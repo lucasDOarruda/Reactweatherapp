@@ -157,9 +157,11 @@ div.Todolist {
 }
 
 ul.list {
-  margin-right: 50%;
+  margin: auto;
+  width: fit-content;
   color: #f2f2f2;
-  font-weight: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 
 button.buttonremove {
