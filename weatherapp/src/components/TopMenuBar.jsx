@@ -6,10 +6,10 @@ const TopMenuBar = () => {
 
     <div className="menu-bar">
       <h1>Widget Garage</h1>
-      <div className="menu-item">Menu 1</div>
-      <div className="menu-item">Menu 2</div>
-      <div className="menu-item">Menu 3</div>
-      <div className="menu-item">Menu 4</div>
+      <div className="menu-item">Weather</div>
+      <div className="menu-item">Tic-Tac-Toe</div>
+      <div className="menu-item">Todo List </div>
+      <div className="menu-item">Contact</div>
     </div>
   );
 }
