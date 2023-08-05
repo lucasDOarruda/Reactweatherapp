@@ -57,7 +57,7 @@ const TicTacToe = () => {
   return (
     
     <div className="game">
-      <h1 className="TictacToe">TicTacToe</h1>
+      <h1 className="TictacToe">Tic-Tac-Toe</h1>
       <div className="board">
         {board.map((cell, index) => renderCell(index))}
       </div>

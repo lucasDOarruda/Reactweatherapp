@@ -6,8 +6,7 @@ import axios from 'axios';
 function Weather() {
 
 
-
-  const [ data, setData] = useState ({
+  const [ data, setData] = useState  ({
     celcius: 10,
     name: 'London',
     humidity: 10,

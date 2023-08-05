@@ -3,6 +3,7 @@ import '../style.css'
 
 const TopMenuBar = () => {
   return (
+    
 <div className='appname'>
 <h1 className='mytitle'>Widget Garage</h1>
 
