@@ -221,7 +221,16 @@ button {
 
 h1.mytitle{
 
-
+font-size: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #780083;
+background-image: -webkit-linear-gradient(90deg, #690ad6 23%, #000000 70%, #fcfcfc 30%);
+background-clip: text;
+-webkit-background-clip: text;
+text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
      
 }
 
