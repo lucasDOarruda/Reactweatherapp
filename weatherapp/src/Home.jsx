@@ -13,7 +13,7 @@ const IntroCarousel = () => {
     {
       title: 'Discover Amazing Content',
       text: 'Vivamus hendrerit mi vitae neque laoreet, ut ultrices risus rhoncus.',
-      image: 'img2.jpg', // Replace with your image source
+      image: '/Images/amazon/supplaychain.png', // Replace with your image source
     },
     {
       title: 'Join Our Community',
