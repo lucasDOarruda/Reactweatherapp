@@ -229,7 +229,7 @@ color: #780083;
 background-image: -webkit-linear-gradient(90deg, #690ad6 23%, #000000 70%, #fcfcfc 30%);
 background-clip: text;
 -webkit-background-clip: text;
-text-fill-color: transparent;
+
 -webkit-text-fill-color: transparent;
      
 }
@@ -255,3 +255,53 @@ text-fill-color: transparent;
 .menu-item:hover {
   background-color: #fffdfd57;
 }
+
+
+
+/* HOME CSS  */
+.intro-carousel {
+  position: relative;
+  max-width: 100%;
+}
+
+.carousel {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel .slide {
+  background: transparent;
+}
+
+.legend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.intro-box {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.intro-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.intro-content p {
+  font-size: 16px;
+}
+
+
+

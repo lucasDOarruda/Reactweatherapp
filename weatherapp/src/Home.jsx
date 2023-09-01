@@ -1,96 +1,64 @@
-import React, { useEffect, useState } from "react";
-import './/style.css'
-import axios from 'axios';
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
-
-function Home() {
-
-
-
-  const [ data, setData] = useState ({
-    celcius: 10,
-    name: 'London',
-    humidity: 10,
-    speed: 2,
-    image:'/Images/amazon/clouds'
-  })
-    const[name, setName] = useState('');
-
-
-const handleClick =() => {
-  if(name !== "") {
-    const apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=94571ad5bfa119c8ca0026d8d2e72434&units=metric`;
-    axios.get(apiUrl)
-    .then(res => {
-      let imagePath ='';
-
-      if(res.data.weather[0].main== "Clouds"){
-        imagePath = "/Images/amazon/clouds.png"
-      } else if(res.data.weather[0].main == "Clear"){
-        imagePath ="/Images/amazon/Clear.png"
-      }else if(res.data.weather[0].main == "Rain"){
-        imagePath ="/Images/amazon/rain.png"
-      }else if(res.data.weather[0].main == "Drizzle"){
-        imagePath ="/Images/amazon/drizzle.png"
-      }else if(res.data.weather[0].main == "Mist"){
-        imagePath ="/Images/amazon/clouds.png"
-      } 
-
-    
-      console.log(res.data);
-      setData({...data, celcius: res.data.main.temp, name: res.data.name, humidity: res.data.main.humidity, speed: res.data.wind.speed, imagePath})
-
-    })
-    .catch( err => console.log(err));
-  }
-
-}
+const IntroCarousel = () => {
+  const slides = [
+    {
+      title: 'Welcome to Our Website',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: 'img1.jpg', // Replace with your image source
+    },
+    {
+      title: 'Discover Amazing Content',
+      text: 'Vivamus hendrerit mi vitae neque laoreet, ut ultrices risus rhoncus.',
+      image: 'img2.jpg', // Replace with your image source
+    },
+    {
+      title: 'Join Our Community',
+      text: 'Integer volutpat turpis in libero condimentum, eu posuere metus tincidunt.',
+      image: 'img3.jpg', // Replace with your image source
+    },
+  ];
 
   return (
-    //Remove if u like header //
-
-    <div className="container">
-
-     
-      <div className=" weather">
-      <h1 className="title1 ">Weather</h1>
-        <div className=" search">
-          <input type= "text" placeholder='Enter City Name'onChange={e => setName(e.target.value)}/>
-          <button><img src="/Images/amazon/Search.PNG" onClick={handleClick} alt=" "/></button>
-        </div>
-        <div className="winfo">
-          <img src={data.image} alt=""/>
-          <h1>{Math.round(data.celcius)}°c</h1>
-          <h2>{data.name}</h2>
-
-          <div className="details">
-
-            <div className="col">
-              <img src="/Images/amazon/humidity.png"></img>
-              <div className="humidity">
-                <p>{Math.round(data.humidity)}%</p>
-                <p>humidity</p>
-              </div>
+    <div className="intro-carousel">
+      <Carousel infiniteLoop autoPlay>
+        {slides.map((slide, index) => (
+          <div key={index}>
+            <img src={slide.image} alt={`Slide ${index}`} />
+            <div className="legend">
+              <h2>{slide.title}</h2>
+              <p>{slide.text}</p>
             </div>
-
-            <div className="col">
-            
-              <img src="/Images/amazon/wind.png"></img>
-              <div className="wind">
-                <p>{Math.round(data.speed)}</p>
-                <p>Wind</p>
-              </div>
-            </div>
-
           </div>
-        </div>
-      </div>
+        ))}
+      </Carousel>
+      <Container className="intro-box">
+        <Row>
+          <Col md={6}>
+            <div className="intro-content">
+              <h3>About Us</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                hendrerit mi vitae neque laoreet, ut ultrices risus rhoncus.
+              </p>
+            </div>
+          </Col>
+          <Col md={6}>
+            <div className="intro-content">
+              <h3>Contact Us</h3>
+              <p>
+                Integer volutpat turpis in libero condimentum, eu posuere metus
+                tincidunt.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
+  );
+};
 
-
-  
-  )
-}
-
-
-export default Home
+export default IntroCarousel;

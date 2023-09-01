@@ -5,6 +5,8 @@ import TodoList from './components/Todolist';
 import TicTacToe from './components/TicTacToe';
 import Weather from './components/Weather';
 import TopMenuBar from './components/TopMenuBar';
+import PostForm from './components/PostForm';
+
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/todo" element={<TodoList />} />
           <Route path="/tictactoe" element={<TicTacToe />} />
           <Route path="/weather" element={<Weather />} />
+          <Route path="/Postform" element={<PostForm/>} />
+
         </Routes>
       </div>
     </Router>
