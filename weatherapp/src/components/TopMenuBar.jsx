@@ -13,7 +13,8 @@ const TopMenuBar = () => {
         <Link to="/weather" className="menu-item">Weather</Link>
         <Link to="/tictactoe" className="menu-item">Tic-Tac-Toe</Link>
         <Link to="/todo" className="menu-item">Todo List</Link>
-        <Link to="/contact" className="menu-item">Contact</Link>
+        <Link to="/PostForm" className="menu-item">Post Form</Link>
+
       </div>
     </div>
   );
