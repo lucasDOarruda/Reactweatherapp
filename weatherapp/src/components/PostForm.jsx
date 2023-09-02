@@ -64,8 +64,8 @@ function BudgetCalculator() {
   };
 
   return (
-    <div>
-      <h1>Budget Calculator</h1>
+    <div className='container'>
+      <h1 className="budgettittle">Budget Calculator</h1>
       <div>
         <h2>Total Budget: ${budget}</h2>
         <input
