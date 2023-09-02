@@ -368,10 +368,12 @@ h1.mytitle {
 
 /* Main container */
 .container {
+  color:#000000;
+  font-style: bold;
   width: 80%;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.282);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
