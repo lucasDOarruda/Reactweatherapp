@@ -1,10 +1,20 @@
-html {
+html, body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,76,121,1) 42%, rgba(0,212,255,1) 100%);
-  
-  
-
-
+  background: rgb(153,48,123);
+  background: -moz-radial-gradient(circle, rgba(153,48,123,1) 0%, rgba(0,214,255,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(153,48,123,1) 0%, rgba(0,214,255,1) 100%);
+  background: radial-gradient(circle, rgba(153,48,123,1) 0%, rgba(0,214,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#99307b",endColorstr="#00d6ff",GradientType=1);
 }
 
 h1.title1{
@@ -135,7 +145,7 @@ body, ul {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f4f4f43f;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center; /* Center all content */
@@ -185,7 +195,8 @@ button {
   font-size: 16px;
   cursor: pointer;
   display: block; /* Make button full width */
-  margin: 0 auto; /* Center the button */
+  margin: auto ; /* Center the button */
+  
 }
 
 button:hover {
@@ -194,33 +205,33 @@ button:hover {
 
 /* To-do list */
 .list {
-  list-style: none;
+  list-style:none;
   padding: 0;
-  text-align: left; /* Align list items to the left */
+  margin: 0;
 }
 
 .list li {
+  
+  
+  
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.todo-content {
+.list .task-content {
   flex-grow: 1;
 }
 
-.due-date {
+.list .due-date {
   font-size: 12px;
   color: #888;
+  margin-right: 0px; /* Add margin for spacing */
 }
 
-/* Remove button */
-.buttonremove {
+.list .buttonremove {
   background-color: transparent;
   border: none;
   color: #ff3333;
@@ -229,8 +240,9 @@ button:hover {
   transition: color 0.2s;
 }
 
-.buttonremove:hover {
+.list .buttonremove:hover {
   color: #cc0000;
+  
 }
 
 
@@ -271,6 +283,7 @@ button:hover {
 
 button {
   margin-top: 5px;
+  margin-bottom: 5px;
   padding: 8px 20px;
 
   background-color: #226224;
@@ -366,6 +379,5 @@ background-clip: text;
 .intro-content p {
   font-size: 16px;
 }
-
 
 

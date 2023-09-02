@@ -13,7 +13,7 @@ const IntroCarousel = () => {
     {
       title: 'Discover Amazing Content',
       text: 'Vivamus hendrerit mi vitae neque laoreet, ut ultrices risus rhoncus.',
-      image: '/Images/amazon/supplaychain.png', // Replace with your image source
+      image: 'public/Images/amazon/supplaychain.png', // Replace with your image source
     },
     {
       title: 'Join Our Community',
@@ -39,10 +39,9 @@ const IntroCarousel = () => {
         <Row>
           <Col md={6}>
             <div className="intro-content">
-              <h3>About Us</h3>
+              <h3>About</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                hendrerit mi vitae neque laoreet, ut ultrices risus rhoncus.
+              I'm an Data Analytics  and Front-end developer who likes to make random projects and put them on the internet.
               </p>
             </div>
           </Col>
@@ -50,8 +49,7 @@ const IntroCarousel = () => {
             <div className="intro-content">
               <h3>Contact Us</h3>
               <p>
-                Integer volutpat turpis in libero condimentum, eu posuere metus
-                tincidunt.
+                Lucas Arruda
               </p>
             </div>
           </Col>
