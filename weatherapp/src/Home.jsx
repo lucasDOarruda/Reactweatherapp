@@ -1,55 +1,33 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaLinkedin, FaReact } from 'react-icons/fa'; // Import icons from Font Awesome
 
 const IntroCarousel = () => {
-  const slides = [
-    {
-      title: 'Welcome to Our Website',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: 'img1.jpg', // Replace with your image source
-    },
-    {
-      title: 'Discover Amazing Content',
-      text: 'Vivamus hendrerit mi vitae neque laoreet, ut ultrices risus rhoncus.',
-      image: 'public/Images/amazon/supplaychain.png', // Replace with your image source
-    },
-    {
-      title: 'Join Our Community',
-      text: 'Integer volutpat turpis in libero condimentum, eu posuere metus tincidunt.',
-      image: 'img3.jpg', // Replace with your image source
-    },
-  ];
-
   return (
     <div className="intro-carousel">
-      <Carousel infiniteLoop autoPlay>
-        {slides.map((slide, index) => (
-          <div key={index}>
-            <img src={slide.image} alt={`Slide ${index}`} />
-            <div className="legend">
-              <h2>{slide.title}</h2>
-              <p>{slide.text}</p>
-            </div>
-          </div>
-        ))}
-      </Carousel>
       <Container className="intro-box">
         <Row>
           <Col md={6}>
             <div className="intro-content">
               <h3>About</h3>
               <p>
-              I'm an Data Analytics  and Front-end developer who likes to make random projects and put them on the internet.
+                I'm a Data Analytics and Front-end developer who likes to make random projects and put them on the internet.
               </p>
             </div>
           </Col>
           <Col md={6}>
             <div className="intro-content">
-              <h3>Contact Us</h3>
+              <h3>Contact</h3>
               <p>
                 Lucas Arruda
+                <br />
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin /> LinkedIn
+                </a>
+                <br />
+                <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer">
+                  <FaReact /> GitHub
+                </a>
               </p>
             </div>
           </Col>

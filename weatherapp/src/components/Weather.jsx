@@ -48,7 +48,7 @@ const handleClick =() => {
   return (
     //Remove if u like header //
 
-    <div className="container">
+    <div className="containerweather">
 
      
       <div className=" weather">

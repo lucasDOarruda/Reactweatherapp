@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faSun, faGamepad, faTasks, faCalculator } from '@fortawesome/free-solid-svg-icons';
 import '../style.css';
 
 const TopMenuBar = () => {
@@ -8,13 +10,21 @@ const TopMenuBar = () => {
       <h1 className='mytitle'>Widget Garage</h1>
 
       <div className="menu-bar">
-        {/* Use Link components for navigation */}
-        <Link to="/" className="menu-item">Home</Link>
-        <Link to="/weather" className="menu-item">Weather</Link>
-        <Link to="/tictactoe" className="menu-item">Tic-Tac-Toe</Link>
-        <Link to="/todo" className="menu-item">Todo List</Link>
-        <Link to="/PostForm" className="menu-item">Post Form</Link>
-
+        <Link to="/" className="menu-item">
+          <FontAwesomeIcon icon={faHome} /> Home
+        </Link>
+        <Link to="/weather" className="menu-item">
+          <FontAwesomeIcon icon={faSun} /> Weather
+        </Link>
+        <Link to="/tictactoe" className="menu-item">
+          <FontAwesomeIcon icon={faGamepad} /> Tic-Tac-Toe
+        </Link>
+        <Link to="/todo" className="menu-item">
+          <FontAwesomeIcon icon={faTasks} /> Todo List
+        </Link>
+        <Link to="/PostForm" className="menu-item">
+          <FontAwesomeIcon icon={faCalculator} /> Budget Calculator
+        </Link>
       </div>
     </div>
   );

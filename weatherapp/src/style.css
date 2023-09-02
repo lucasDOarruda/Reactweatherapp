@@ -392,7 +392,7 @@ background-clip: text;
 
 /* Main container */
 .container {
-  display:block;
+  display: auto;
   width: 80%;
   margin: 0 auto;
   padding: 20px;
@@ -453,4 +453,46 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+
+
+
+/* Add this CSS to your style.css file */
+
+/* Default styling for menu items */
+.menu-item {
+
+  text-decoration: none;
+  color: #333;
+  margin-right: 20px; /* Add some spacing between menu items */
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .menu-bar {
+    
+    display:block;
+    flex-direction:initial; /* Stack menu items vertically */
+  }
+
+  /* Optional: Adjust spacing for smaller screens */
+  .menu-item {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: auto; /* Add some spacing between menu items */
+  }
+}
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 769px) {
+  .menu-bar {
+    display: flex;
+    flex-direction: row; /* Display menu items horizontally */
+  }
+
+  /* Optional: Reset spacing for larger screens */
+  .menu-item {
+    margin-right: 20px; /* Add right margin back */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
 }
