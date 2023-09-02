@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSun, faGamepad, faTasks, faCalculator } from '@fortawesome/free-solid-svg-icons';
+import { faRobot } from '@fortawesome/free-solid-svg-icons';
 import '../style.css';
 
 const TopMenuBar = () => {
+  const titleText = ":)";
+
   return (
     <div className='appname'>
-      <h1 className='mytitle'>Widget Garage</h1>
+      <h1 className='mytitle'>
+        <FontAwesomeIcon icon={faRobot} /> {titleText}
+      </h1>
 
       <div className="menu-bar">
         <Link to="/" className="menu-item">
@@ -28,6 +33,6 @@ const TopMenuBar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default TopMenuBar;
