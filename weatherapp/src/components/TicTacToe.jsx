@@ -29,7 +29,7 @@ const TicTacToe = () => {
     }
 
     setPlayer(player === "X" ? "O" : "X");
-  };
+  }
 
   const resetGame = () => {
     setBoard(Array(9).fill(null));

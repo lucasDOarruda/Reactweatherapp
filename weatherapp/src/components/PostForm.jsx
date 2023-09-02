@@ -1,68 +1,125 @@
+import React, { useState, useEffect } from 'react';
 
-import React, { Component } from 'react';
-import "../style.css";
+function BudgetCalculator() {
+  const [incomeList, setIncomeList] = useState([]);
+  const [expenseList, setExpenseList] = useState([]);
+  const [itemName, setItemName] = useState('');
+  const [itemAmount, setItemAmount] = useState(0);
+  const [budget, setBudget] = useState(0);
+  const [remainingAmount, setRemainingAmount] = useState(0);
 
-class PostForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: '',
-      body: '',
-    };
-  }
+  useEffect(() => {
+    // Calculate total income by summing amounts of items with positive amounts
+    const totalIncome = incomeList.reduce((total, item) => {
+      return item.amount > 0 ? total + item.amount : total;
+    }, 0);
+  
+    // Calculate total expense by summing amounts of items with negative amounts
+    const totalExpense = expenseList.reduce((total, item) => {
+      return item.amount < 0 ? total - item.amount : total;
+    }, 0);
+  
+    // Calculate the remaining budget based on the provided budget
+    const remaining = budget - (totalExpense - totalIncome);
+  
+    setRemainingAmount(remaining);
+  }, [incomeList, expenseList, budget]);
+  
 
-  handleChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
+  const handleItemNameChange = (e) => {
+    setItemName(e.target.value);
   };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    const { title, body } = this.state;
-
-    // Make a POST request to the JSON server
-    fetch('http://localhost:3000/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ title, body }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Post created:', data);
-        // Optionally, update your component's state or perform any other actions
-      });
+  const handleItemAmountChange = (e) => {
+    setItemAmount(parseFloat(e.target.value));
   };
 
-  render() {
-    return (
+  const addItemToList = () => {
+    if (itemName && itemAmount) {
+      const newItem = { name: itemName, amount: itemAmount };
+      if (itemAmount >= 0) {
+        setIncomeList([...incomeList, newItem]);
+      } else {
+        setExpenseList([...expenseList, newItem]);
+      }
+      setItemName('');
+      setItemAmount(0);
+    }
+  };
+
+  const removeItem = (listType, index) => {
+    if (listType === 'income') {
+      const updatedIncomeList = [...incomeList];
+      updatedIncomeList.splice(index, 1);
+      setIncomeList(updatedIncomeList);
+    } else if (listType === 'expense') {
+      const updatedExpenseList = [...expenseList];
+      updatedExpenseList.splice(index, 1);
+      setExpenseList(updatedExpenseList);
+    }
+  };
+
+  const setBudgetAmount = (e) => {
+    setBudget(parseFloat(e.target.value));
+  };
+
+  return (
+    <div>
+      <h1>Budget Calculator</h1>
       <div>
-        <h2>Create a Post</h2>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>Title:</label>
-            <input
-              type="text"
-              name="title"
-              value={this.state.title}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div>
-            <label>Body:</label>
-            <textarea
-              name="body"
-              value={this.state.body}
-              onChange={this.handleChange}
-            />
-          </div>
-          <button type="submit">Create Post</button>
-        </form>
+        <h2>Total Budget: ${budget}</h2>
+        <input
+          type="number"
+          placeholder="Set Budget"
+          value={budget}
+          onChange={setBudgetAmount}
+        />
+        <h3>Remaining Budget: ${remainingAmount}</h3>
+        {remainingAmount > 0 ? (
+          <p>You will have a surplus of ${remainingAmount}</p>
+        ) : remainingAmount < 0 ? (
+          <p>You will be overspending by ${-remainingAmount}</p>
+        ) : (
+          <p>Your budget will be balanced</p>
+        )}
       </div>
-    );
-  }
+      <div>
+        <h3>Income List</h3>
+        <ul>
+          {incomeList.map((item, index) => (
+            <li key={index}>
+              {item.name}: ${item.amount}{' '}
+              <button onClick={() => removeItem('income', index)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+        <h3>Expense List</h3>
+        <ul>
+          {expenseList.map((item, index) => (
+            <li key={index}>
+              {item.name}: ${item.amount}{' '}
+              <button onClick={() => removeItem('expense', index)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+        <div>
+          <input
+            type="text"
+            placeholder="Item Name"
+            value={itemName}
+            onChange={handleItemNameChange}
+          />
+          <input
+            type="number"
+            placeholder="Item Amount"
+            value={itemAmount}
+            onChange={handleItemAmountChange}
+          />
+          <button onClick={addItemToList}>Add</button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default PostForm;
+export default BudgetCalculator;
