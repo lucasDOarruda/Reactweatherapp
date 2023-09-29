@@ -6,7 +6,7 @@ import { faRobot } from '@fortawesome/free-solid-svg-icons';
 import '../style.css';
 
 const TopMenuBar = () => {
-  const titleText = ":)";
+  const titleText = "";
 
   return (
     <div className='appname'>

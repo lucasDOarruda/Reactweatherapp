@@ -6,13 +6,16 @@ import TicTacToe from './components/TicTacToe';
 import Weather from './components/Weather';
 import TopMenuBar from './components/TopMenuBar';
 import PostForm from './components/PostForm';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <Router>
       <div>
+        
         <TopMenuBar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/todo" element={<TodoList />} />
